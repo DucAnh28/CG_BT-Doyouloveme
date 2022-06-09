@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+</head>
+<body>
+<h1 style="position: relative; left: 100px; top: 80px">Do You Love Me ?!</h1>
+<div class="nutbam">
+<button id="Yes" type="button" value="yes" onclick="yesClick()" style="top: 154px ;left: 140px;position: absolute;width: 50px;height: 45px">Yes</button>
+<button id="No" type="button" value="no" onmouseover="NoClick()" style="top: 154px ;left: 220px;position: absolute;width: 50px;height: 45px">No</button>
+</div>
+</body>
+<script>
+    function yesClick(){
+        alert("I love you too !!");
+    }
+    function NoClick(){
+        let a = document.getElementById("No");
+        // let b = document.getElementById("No")
+        // Math.round là để làm tròn
+        let height = window.innerHeight;
+        let width = window.innerWidth;
+        x = Math.round(Math.random() * height);
+        y = Math.round(Math.random() * width);
+        a.style.left = y +"px"
+        a.style.top = x +"px"
+    }
+</script>
+</html>
